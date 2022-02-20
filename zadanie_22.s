@@ -62,11 +62,11 @@ mov eax,1 ; 1 (sys_exit) системный вызов
 int 0x80
 
 section .data
-file_name db 'nado.txt'
+file_name db 'nado.txt', 0
 msg db "Hi, im Maks!"
 len equ $-msg
 
-msg_done db "Строка былла внесена в файл с названием nado.txt", 0xa
+msg_done db "Строка, которая былла внесена в файл с названием nado.txt", 0xa
 len_done equ $-msg_done
 
 section .bss
